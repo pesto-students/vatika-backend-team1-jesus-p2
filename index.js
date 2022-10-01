@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
+const cors=require('cors')
+app.use(cors({
+  origin:'http://localhost:3000',
+  methods:["GET","POST"],
+}))
+
+
 
 //Router Import
 const userRouter = require("./routes/user");
