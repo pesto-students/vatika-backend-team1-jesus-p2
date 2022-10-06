@@ -1,5 +1,5 @@
 const router=require('express').Router();
-const Blog=require('../model/Blog');
+const Blog=require('../models/Blog');
 
 //Add New Blog
 router.post('/blog',async(req,res)=>{

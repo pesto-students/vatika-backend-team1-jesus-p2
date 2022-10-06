@@ -10,16 +10,16 @@ app.use(cors({
 }));
 
 
-//Router Import
+//Router Import's
 const userRouter = require("./routes/user");
 const orderhistoryRouter = require("./routes/orderhistory");
-const productRouter = require("./routes/product");
-const blogRouter=require('./routes/blog');
+const productRouter = require("./routes/product"); 
+const blogRouter=require('./routes/blog'); 
 const addressRouter=require('./routes/address');
 const superCoinRouter=require('./routes/supercoin');
 const paymentRouter=require('./routes/payment')
 
-//Connect to DB
+//Connection to MongoDB
 mongoose.connect(process.env.DB_URL, () => {
   console.log("Connected to DB");
 });
@@ -27,28 +27,15 @@ mongoose.connect(process.env.DB_URL, () => {
 
 //Middleware
 app.use(express.json());//this is to accept data in JSON Format
-app.use(bodyParser.urlencoded({ extended: true }));//this is to Decode the data sent from FrontEnd
+app.use(bodyParser.urlencoded({ extended: true }));//this is to decode the data sent from FrontEnd
 
-//authRoute Middleware
-app.use("/", userRouter);
-
-//orderhistoryRoute Middleware
-app.use("/", orderhistoryRouter);
-
-//addProductRoute Middleware
-app.use("/", productRouter);
-
-//blogRoute Middleware
-app.use("/",blogRouter);
-
-//userAddressRoute Middleware
-app.use("/",addressRouter);
-
-//supercoinRoute Middleware
-app.use("/",superCoinRouter);
-
-//paymentRoute Middleware
-app.use('/',paymentRouter);
+app.use("/", userRouter); //authRoute Middleware
+app.use("/", orderhistoryRouter); //orderhistoryRoute Middleware
+app.use("/", productRouter); //addProductRoute Middleware
+app.use("/",blogRouter); //blogRoute Middleware
+app.use("/",addressRouter); //userAddressRoute Middleware
+app.use("/",superCoinRouter); //supercoinRoute Middleware
+app.use('/',paymentRouter); //paymentRoute Middleware
 
 //Listening to Port
 app.listen(5000, () => {

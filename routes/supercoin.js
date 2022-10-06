@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const SuperCoin=require('../model/SuperCoin');
+const SuperCoin=require('../models/SuperCoin');
 
 router.get('/supercoin',async (req,res)=>{
 

@@ -13,9 +13,9 @@ const UserSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    date:{
-        type:Date,
-        default:Date.now
+    mobileNo:{
+        type:Number,
+        required:true
     }
 })
 
