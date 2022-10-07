@@ -1,3 +1,5 @@
+const SuperCoin = require("../models/SuperCoin");
+
 const queryByEmail = (userEmail) => {
   return SuperCoin.find({ email: userEmail });
 };

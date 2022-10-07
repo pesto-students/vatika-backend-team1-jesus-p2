@@ -36,7 +36,6 @@ const fetchAllProduct = async (req, res) => {
 
 const fetchProductByName = async (req, res) => {
   const productName = req.params.name;
-
   const product = await queryProductByName(productName);
   if (product.length == 0) return res.send("No Products to Display");
   res.send(product);

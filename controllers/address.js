@@ -1,8 +1,8 @@
 const Address = require("../models/Address");
 const {
   queryByAddress,
-  addAddress,
-  fetchAllAddress,
+  addUserAddress,
+  fetchAllUserAddress,
   deleteUserAddress,
 } = require("../services/AddressTable");
 
@@ -23,7 +23,7 @@ const addAddress = async (req, res) => {
     userPincode: req.body.pincode,
   };
   try {
-    const savedDetails = await addAddress(allDetails);
+    const savedDetails = await addUserAddress(allDetails);
     res.send("Address Saved Successfully");
   } catch (err) {
     res.status(400).send(err);
@@ -33,7 +33,7 @@ const addAddress = async (req, res) => {
 const fetchAllAddress = async (req, res) => {
   const userEmail = req.query.email;
 
-  const allUserAddress = await fetchAllAddress(userEmail);
+  const allUserAddress = await fetchAllUserAddress(userEmail);
   if (allUserAddress.length == 0) return res.send([]);
 
   res.send(allUserAddress);

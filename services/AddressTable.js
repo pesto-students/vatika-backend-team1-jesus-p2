@@ -5,7 +5,7 @@ const queryByAddress = (fname) => {
 };
 
 
-const addAddress = (allDetails) => {
+const addUserAddress = (allDetails) => {
   const details = new Address({
     email: allDetails.userEmail,
     firstName: allDetails.userFirstName,
@@ -21,7 +21,7 @@ const addAddress = (allDetails) => {
 };
 
 
-const fetchAllAddress=(userEmail)=>{
+const fetchAllUserAddress=(userEmail)=>{
    return Address.find({ email: userEmail })
 }
 
@@ -31,7 +31,7 @@ const deleteUserAddress=(userId)=>{
 
 module.exports = {
   queryByAddress,
-  addAddress,
-  fetchAllAddress,
+  addUserAddress,
+  fetchAllUserAddress,
   deleteUserAddress,
 };
