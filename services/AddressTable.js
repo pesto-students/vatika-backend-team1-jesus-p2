@@ -4,10 +4,9 @@ const queryByAddress = (fname) => {
   return Address.findOne({ firstName: fname });
 };
 
-
 const addUserAddress = (allDetails) => {
   const details = new Address({
-    email: allDetails.userEmail,
+    userId: allDetails.userId,
     firstName: allDetails.userFirstName,
     lastName: allDetails.userLastName,
     address: allDetails.userAddress,
@@ -20,14 +19,13 @@ const addUserAddress = (allDetails) => {
   return details.save();
 };
 
+const fetchAllUserAddress = (userId) => {
+  return Address.find({ userId: userId });
+};
 
-const fetchAllUserAddress=(userEmail)=>{
-   return Address.find({ email: userEmail })
-}
-
-const deleteUserAddress=(userId)=>{
-    return  Address.deleteOne({ _id: userId});
-}
+const deleteUserAddress = (userId) => {
+  return Address.deleteOne({ _id: userId });
+};
 
 module.exports = {
   queryByAddress,

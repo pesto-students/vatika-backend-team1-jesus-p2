@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "mocha --timeout 5000 --exit"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,9 @@
     "razorpay": "^2.8.3"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.1.0",
     "nodemon": "^2.0.20"
   }
 }

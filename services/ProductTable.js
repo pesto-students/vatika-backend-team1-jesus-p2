@@ -15,7 +15,7 @@ const newProductEntry = (allDetails) => {
     description: allDetails.productDesc,
     rating: allDetails.productRating,
     category: allDetails.productCategory,
-    discount: allDetails.productDiscount,
+    kingdom: allDetails.productKingdom,
     maintain: allDetails.productMaintain,
     sunlight: allDetails.productSunlight,
     water: allDetails.productWater,

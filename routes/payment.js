@@ -31,6 +31,7 @@ router.post("/orders", async (req, res) => {
 
 //Payment Verify
 router.post("/verify", async (req, res) => {
+  console.log("Hi Verify");
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
       req.body;
@@ -40,8 +41,8 @@ router.post("/verify", async (req, res) => {
       .createHmac("sha256", process.env.KEY_SECRET)
       .update(sign.toString())
       .digest("hex");
-
     if (razorpay_signature === expectedSign) {
+      console.log("Hi BackEnd");
       return res
         .status(200)
         .json({ message: "Payment Verified Successfully!" });
@@ -49,7 +50,6 @@ router.post("/verify", async (req, res) => {
       return res.status(400).json({ message: "Invalid Signature Sent!" });
     }
   } catch (error) {
-    console.log(error);
     res.status(500).json({ message: "Internal Server Error!" });
   }
 });

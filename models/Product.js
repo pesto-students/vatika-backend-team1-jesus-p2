@@ -25,11 +25,9 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  discount: {
-    type: Number,
+  kingdom: {
+    type: String,
     required: true,
-    min: 10,
-    max: 60,
   },
   maintain: {
     type: String,

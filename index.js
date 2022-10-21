@@ -40,6 +40,8 @@ app.use("/api/signup", signupRouter); //signUpRoute Middleware
 app.use("/api/login", loginRouter); // loginRoute Middleware
 
 //Listening to Port
-app.listen(process.env.PORT || 5000, () => {
+const server=app.listen(process.env.PORT || 5000, () => {
   console.log("Server Started");
 });
+
+module.exports=server;
