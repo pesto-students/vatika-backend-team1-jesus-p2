@@ -34,7 +34,7 @@ const fetchAllAddress = async (req, res) => {
   const userId = req.query.userId;
 
   const allUserAddress = await fetchAllUserAddress(userId);
-  if (allUserAddress.length == 0) return res.status(400).send([]);
+  if (allUserAddress.length == 0) return res.status(201).send([]);
 
   res.status(200).send(allUserAddress);
 };
