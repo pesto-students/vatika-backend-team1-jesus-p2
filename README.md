@@ -1,4 +1,4 @@
-# Vatika
+# Vatika | BackEnd
 
 ![Vatika Logo](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/logo_lcxupl.png)
 
@@ -44,6 +44,12 @@ npm install
  npm start
 ```
 
+- Run the below command to Run All TestCases
+
+```bash
+ npm test
+```
+
 ## Technology Stack
 
 We have used MERN stack to develop the Application.
@@ -56,6 +62,12 @@ We have used MERN stack to develop the Application.
 
 - [Kavish Garg](https://github.com/Kavish15)
 - [Mihir Soni](https://github.com/mihirsoni15)
+
+## Web Screen Shoots
+
+![Landing Page](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1667506837/Vatika/React%20FrontEnd/Landing_Page_brbudd.png)
+
+![Product Page](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1667506837/Vatika/React%20FrontEnd/Product_Page_njejpd.png)
 
 ## License
 
